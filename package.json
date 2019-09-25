@@ -9,7 +9,7 @@
     "electron-packager": "^14.0.6"
   },
   "scripts": {
-    "dist": "rm -rf Weather-darwin-x64/ && electron-packager .",
-    "start": "electron index.js"
+    "dist": "yarn && rm -rf Weather-darwin-x64/ && electron-packager .",
+    "start": "yarn && electron index.js"
   }
 }
