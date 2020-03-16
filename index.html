@@ -1,26 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Weather</title>
-    <style>
-      body > iframe:not(:last-child) {
-        margin-bottom: 40px;
-        padding-bottom: 40px;
-        border-bottom: 2px solid black;
-      }
-    </style>
-  </head>
-  <body>
-    <script
-      type="text/javascript"
-      src="https://darksky.net/widget/default/39.8917,-85.9685/us12/en.js?width=100%&height=301&title=Full Forecast&textColor=333333&bgColor=transparent&transparency=true&skyColor=undefined&fontFamily=Default&customFont=&units=us&htColor=333333&ltColor=C7C7C7&displaySum=yes&displayHeader=yes"
-    ></script>
-    <script
-      type="text/javascript"
-      src="https://darksky.net/widget/graph-bar/39.8917,-85.9685/us12/en.js?width=100%&height=260&title=Full Forecast&textColor=333333&bgColor=transparent&transparency=true&skyColor=undefined&fontFamily=Default&customFont=&units=us&timeColor=333333&tempColor=333333&currentDetailsOption=true"
-    ></script>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Weather</title>
+        <style>
+            body > iframe:not(:last-child) {
+                margin-bottom: 40px;
+                padding-bottom: 40px;
+                border-bottom: 2px solid black;
+            }
+        </style>
+    </head>
+
+    <body>
+        <script
+            type="text/javascript"
+            src="https://darksky.net/widget/default/39.8917,-85.9685/us12/en.js?width=100%&height=301&title=Full Forecast&textColor=333333&bgColor=transparent&transparency=true&skyColor=undefined&fontFamily=Default&customFont=&units=us&htColor=333333&ltColor=C7C7C7&displaySum=yes&displayHeader=yes"
+        ></script>
+        <script
+            type="text/javascript"
+            src="https://darksky.net/widget/graph-bar/39.8917,-85.9685/us12/en.js?width=100%&height=260&title=Full Forecast&textColor=333333&bgColor=transparent&transparency=true&skyColor=undefined&fontFamily=Default&customFont=&units=us&timeColor=333333&tempColor=333333&currentDetailsOption=true"
+        ></script>
+        <script
+            type="application/javascript"
+            src="https://darksky.net/widget/graph/39.8917,-85.9685/us12/en.js?width=100%&height=320&title=46236&textColor=333333&bgColor=transparent&transparency=true&fontFamily=Default&customFont=&units=us&graph=temperature_graph&timeColor=333333&tempColor=333333&lineColor=333333&markerColor=333333"
+        ></script>
+        <script
+            type="application/javascript"
+            src="https://darksky.net/widget/graph/39.8917,-85.9685/us12/en.js?width=100%&height=320&title=46236&textColor=333333&bgColor=transparent&transparency=true&fontFamily=Default&customFont=&units=us&graph=precip_graph&timeColor=333333&tempColor=333333&lineColor=333333&markerColor=333333"
+        ></script>
+        <script
+            type="application/javascript"
+            src="https://darksky.net/widget/graph/39.8917,-85.9685/us12/en.js?width=100%&height=320&title=46236&textColor=333333&bgColor=transparent&transparency=true&fontFamily=Default&customFont=&units=us&graph=wind_graph&timeColor=333333&tempColor=333333&lineColor=333333&markerColor=333333"
+        ></script>
+    </body>
 </html>
