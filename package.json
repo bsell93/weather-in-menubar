@@ -2,6 +2,7 @@
   "productName": "Weather",
   "version": "1.0.0",
   "dependencies": {
+    "axios": "^0.19.2",
     "menubar": "^6.0.8"
   },
   "devDependencies": {
