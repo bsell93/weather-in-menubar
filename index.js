@@ -7,7 +7,6 @@ const mb = menubar({
 });
 
 const setTitle = async () => {
-    console.log(process.env.ELECTRON_WEBPACK_APP_DARK_SKY_API_KEY);
     const response = await axios.get(
         'https://api.darksky.net/forecast/[REPLACE_ME_WITH_DARK_SKY_API_KEY]/39.8917,-85.9685'
     );
@@ -20,9 +19,7 @@ mb.on('ready', () => {
     setTitle();
     setInterval(() => {
         console.log('window is reloaded');
+        setTitle();
         mb.window.loadURL(`file://${__dirname}/index.html`);
     }, OneMinuteInMilliSeconds * 5);
-    setInterval(() => {
-        setTitle();
-    }, OneMinuteInMilliSeconds * 30);
 });
