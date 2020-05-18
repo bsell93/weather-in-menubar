@@ -1,16 +1,75 @@
 {
-  "productName": "Weather",
-  "version": "1.0.0",
+  "name": "weather-in-menubar",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/jest": "^25.2.2",
+    "@types/node": "^14.0.1",
+    "@types/react": "^16.9.35",
+    "@types/react-dom": "^16.9.8",
     "axios": "^0.19.2",
-    "menubar": "^6.0.8"
-  },
-  "devDependencies": {
-    "electron": "^6.0.10",
-    "electron-packager": "^14.0.6"
+    "dotenv": "^8.2.0",
+    "menubar": "^8.0.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1",
+    "typescript": "^3.9.2"
   },
   "scripts": {
-    "dist": "yarn && rm -rf Weather-darwin-x64/ && electron-packager .",
-    "start": "yarn && electron index.js"
+    "start": "yarn && react-scripts start",
+    "build": "yarn && react-scripts build",
+    "test": "yarn && react-scripts test",
+    "eject": "yarn && react-scripts eject",
+    "electron-start": "electron public/Main.js",
+    "preelectron-pack": "yarn build",
+    "electron-pack": "electron-builder build -c.extraMetadata.main=build/Main.js"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.9.6",
+    "@babel/plugin-transform-runtime": "^7.9.6",
+    "@babel/polyfill": "^7.8.7",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.9.4",
+    "@babel/preset-typescript": "^7.9.0",
+    "@typescript-eslint/eslint-plugin": "^2.33.0",
+    "@typescript-eslint/parser": "^2.33.0",
+    "babel-eslint": "^10.1.0",
+    "electron": "^8.3.0",
+    "electron-builder": "^22.6.0",
+    "eslint-plugin-cypress": "^2.10.3",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4.0.2"
+  },
+  "main": "build/Main.js",
+  "homepage": "./",
+  "build": {
+    "appId": "nonExistentID",
+    "files": [
+      "build",
+      "node_modules"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    }
   }
 }
